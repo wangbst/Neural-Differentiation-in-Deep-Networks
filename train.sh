@@ -5,12 +5,6 @@
 #SBATCH --mem=30G
 #SBATCH --cpus-per-task=8
 
-
-export WANDB_API_KEY="your key"
-
-
-wandb login $WANDB_API_KEY
-
 source ~/.bashrc
 
 conda activate PyTorch
