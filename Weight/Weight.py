@@ -65,7 +65,7 @@ def calculate_sparsity(model):
     
     return
 
-# Function to prune weights based on DRI
+# Function to prune weights based on NDI
 def prune_weights_NDI(model, NDI_values, target_sparsity=):
     
     # Calculate current sparsity
