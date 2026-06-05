@@ -33,5 +33,6 @@ $ python MLP-Net.py
 ```
 # Run VGG16 on CIFAR-10.
  ```shell
-$ python VGG16.py
+# Define VGG16 model
+$ model = models.vgg16(pretrained=True)
 ```
