@@ -39,11 +39,12 @@ $ python Leaky ReLU.py
 # Run MLP-Net on MNIST.
  ```shell
 $ python MLP-Net.py
-
+```
 # Run VGG16 on CIFAR-10.
  ```shell
 $ python VGG16.py
-
+```
 # Run MobileNet-V2 on ImageNet.
  ```shell
 $ python MobileNet-V2.py
+```
