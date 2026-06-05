@@ -15,22 +15,13 @@ pip install scipy
 # Datasets
 Please download the Imagenet Dataset. 
 
-# ResNet18 and Leaky ReLU
-All used ResNet18 and Leaky ReLU models can be downloaded from here. Please put them in ResNet18().
-
-# Run calculate NDI for a ResNet-18 trained on CIFAR-10.
- ```shell
-$ python Resnet18.py
-$ python Leaky ReLU.py
-```
-- In Leaky ReLU.py, replace activation functions ReLU with LeakyReLU.
-
 # Run Neural sparsity for ResNet-18 on CIFAR-10.
  ```shell
 $ python Resnet18.py
 $ python Leaky ReLU.py
 ```
-
+- In Leaky ReLU.py, replace activation functions ReLU with LeakyReLU.
+  
  # Run Weight sparsity for ResNet-18 on CIFAR-10.
  ```shell
 $ python Resnet18.py
