@@ -35,7 +35,3 @@ $ python MLP-Net.py
  ```shell
 $ python VGG16.py
 ```
-# Run MobileNet-V2 on ImageNet.
- ```shell
-$ python MobileNet-V2.py
-```
