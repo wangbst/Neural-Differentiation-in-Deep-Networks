@@ -1,8 +1,8 @@
-# DNR-Pruning: Sparsity-Aware Pruning via Dying Neuron Reactivation in Convolutional Neural Networks
-This is the official implementation for DNR-Pruning: Sparsity-Aware Pruning via Dying Neuron Reactivation in Convolutional Neural Networks
+# Neural Differentiation in Deep Networks: A Theoretical Framework for Expressivity and Representational Diversity
+This is the official implementation for Neural Differentiation in Deep Networks: A Theoretical Framework for Expressivity and Representational Diversity.
 
 # Overview
-In this paper, we challenge the conventional view of dead neurons—neurons that cease to activate—during deep neural network training. Traditionally regarded as problematic due to their association with optimization challenges and reduced model adaptability over training epochs, dead neurons are often seen as a hindrance. However, we present a novel perspective, demonstrating that they can be effectively leveraged to enhance network sparsity. Specifically, we propose DNR-Pruning, dying neuron reactivation based sparsity-aware pruning approach for convolutional neural networks (CNNs) that exploits the behavior of individual neurons during training. Through a systematic exploration of hyperparameter configurations, we show that dying neurons can be harnessed to improve pruning algorithms. Our method dynamically monitors the occurrence of dying neurons, enabling adaptive sparsification throughout CNN training. Extensive experiments on diverse datasets demonstrate that DNR-Pruning outperforms existing sparsity-aware pruning techniques while achieving competitive results compared to state-of-the-art methods. These findings suggest that dying neurons can serve as an efficient mechanism for network compression and resource optimization in CNNs, opening new avenues for more efficient and high-performance deep learning models.
+We begin by developing a mathematical framework of neural differentiation, formulated at the level of individual neurons. This framework formalizes the principle that each neuron should acquire a distinct representational role within the network, thereby avoiding redundancy and maximizing collective expressivity. Differentiation is quantified through the Neural Differentiation Index (NDI), a lossaware measure that characterizes neuron significance from geometric, informational, and curvature-based perspectives within a unified framework. The NDI enables a rigorous characterization of how strongly a neuron diverges from its peers in both function and importance, and supports theoretical guarantees: we establish formal bounds on the error increase under NDI-guided elimination, thereby providing provable safety margins for network compression. Building on this foundation, we introduce Neural Differentiation Pruning (NDP) as a practical instantiation. NDP leverages NDI to perform adaptive, training-time neuron sparsification, followed by targeted fine-tuning, guiding networks toward compact yet highly differentiated backbones. Although the terminology draws loose intuition from biological differentiation, the framework is fully mathematical and architecture-agnostic. Experiments on modern vision benchmarks and architectures show that NDP achieves substantial structured sparsity while maintaining—or even improving—accuracy and robustness, underscoring the practical impact of the differentiation framework.
 
 # Dependencies
 ```shell
@@ -18,21 +18,32 @@ Please download the Imagenet Dataset.
 # ResNet18 and Leaky ReLU
 All used ResNet18 and Leaky ReLU models can be downloaded from here. Please put them in ResNet18().
 
-# Run dying neurons accumulation for a ResNet-18 trained on CIFAR-10.
+# Run calculate NDI for a ResNet-18 trained on CIFAR-10.
  ```shell
 $ python Resnet18.py
 $ python Leaky ReLU.py
 ```
 - In Leaky ReLU.py, replace activation functions ReLU with LeakyReLU.
 
-# Run Neural sparsity, structured methods for ResNet-18 on CIFAR-10.
+# Run Neural sparsity for ResNet-18 on CIFAR-10.
  ```shell
 $ python Resnet18.py
 $ python Leaky ReLU.py
 ```
 
- # Run Weight sparsity, structured methods for ResNet-18 on CIFAR-10.
+ # Run Weight sparsity for ResNet-18 on CIFAR-10.
  ```shell
 $ python Resnet18.py
 $ python Leaky ReLU.py
 ```
+# Run MLP-Net on MNIST.
+ ```shell
+$ python MLP-Net.py
+
+# Run VGG16 on CIFAR-10.
+ ```shell
+$ python VGG16.py
+
+# Run MobileNet-V2 on ImageNet.
+ ```shell
+$ python MobileNet-V2.py
